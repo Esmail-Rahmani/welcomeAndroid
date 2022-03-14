@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color"
+    tools:context=".W3Fragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:id="@+id/welcome3"
+        android:layout_marginTop="40dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_linear_layout"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:gravity="center_horizontal"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_color"
+            android:layout_gravity="center_horizontal"
+            android:text="Welcome to the
+Self-Assessement"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="14sp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/primary_color"
+            android:layout_gravity="center_horizontal"
+            android:text="Describe how you see yourself by ranking a
+selection of 20 soft skills\n\n
+Don’t worry, there is no wrong or righ answer,
+everyone is unique."/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:textColor="@color/primary_color"
+            android:layout_gravity="center_horizontal"
+            android:text="It will take beetween 3 and 5 minutes. 
+And remember: be fair to yourself!"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <ImageView android:layout_height="8dp" android:layout_margin="10dp" android:layout_width="8dp" app:srcCompat="@drawable/unselect_dot" />
+            <ImageView android:layout_height="8dp" android:layout_margin="10dp"  android:layout_width="8dp" app:srcCompat="@drawable/unselect_dot" />
+            <ImageView android:layout_height="8dp" android:layout_width="8dp" android:layout_margin="10dp"  app:srcCompat="@drawable/select_dot" />
+            <ImageView android:layout_height="8dp" android:layout_width="8dp"  android:layout_margin="10dp" app:srcCompat="@drawable/unselect_dot" />
+            <ImageView android:layout_height="8dp" android:layout_width="8dp"  android:layout_margin="10dp" app:srcCompat="@drawable/unselect_dot" />
+            <ImageView android:layout_height="8dp" android:layout_width="8dp"  android:layout_margin="10dp" app:srcCompat="@drawable/unselect_dot" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:id="@+id/next_btn_w2"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="40dp"
+            android:textSize="22sp"
+            android:textColor="@color/primary_color"
+            android:layout_height="wrap_content"
+            android:text="LET'S BEGIN"
+            android:background="@drawable/rounded_button"
+            />
+
+
+    </LinearLayout>
+</FrameLayout>

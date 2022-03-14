@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".W5Fragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:id="@+id/welcome5"
+        android:layout_marginTop="40dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_linear_layout"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_color"
+            android:layout_gravity="center_horizontal"
+            android:text="Expertise"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="14sp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/primary_color"
+            android:layout_gravity="center_horizontal"
+            android:text="Hashtag in which specialities you’ve got an
+edge.\n\n
+This may be a type of project you’ve been
+working on, subjects you are an expert on or
+something you are passionate or proud
+about"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:hint="#Skills"
+                android:textColorHint="@color/primary_color"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:textColor="@color/primary_color"
+                android:background="@drawable/rounded_border"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:id="@+id/add_btn"
+                android:layout_margin="12dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:background="@drawable/rounded_button"
+                />
+        </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:text="#Excel"
+        android:background="@drawable/rounded_button_primary_color"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+    android:layout_width="wrap_content"
+    android:layout_margin="10dp"
+    android:layout_gravity="center_horizontal"
+    android:textColor="@color/white"
+    android:layout_height="wrap_content"
+    android:text="#Word"
+    android:background="@drawable/rounded_button_primary_color"
+    />
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:text="#Design"
+        android:background="@drawable/rounded_button_primary_color"
+        />
+</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <ImageView android:layout_height="8dp" android:layout_margin="10dp" android:layout_width="8dp" app:srcCompat="@drawable/unselect_dot" />
+            <ImageView android:layout_height="8dp" android:layout_margin="10dp"  android:layout_width="8dp" app:srcCompat="@drawable/unselect_dot" />
+            <ImageView android:layout_height="8dp" android:layout_width="8dp" android:layout_margin="10dp"  app:srcCompat="@drawable/unselect_dot" />
+            <ImageView android:layout_height="8dp" android:layout_width="8dp"  android:layout_margin="10dp" app:srcCompat="@drawable/unselect_dot" />
+            <ImageView android:layout_height="8dp" android:layout_width="8dp"  android:layout_margin="10dp" app:srcCompat="@drawable/select_dot" />
+            <ImageView android:layout_height="8dp" android:layout_width="8dp"  android:layout_margin="10dp" app:srcCompat="@drawable/unselect_dot" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:id="@+id/next_btn_w2"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="40dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_color"
+            android:textSize="22sp"
+            android:text="CONFIRM"
+            android:background="@drawable/rounded_button"
+            />
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

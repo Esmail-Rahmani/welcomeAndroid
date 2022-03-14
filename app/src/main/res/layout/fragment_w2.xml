@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary_color"
+    tools:context=".W2Fragment">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:id="@+id/welcome2"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@color/primary_color"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textSize="32sp"
+            android:textColor="@color/purple_200"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            android:textColor="@color/secondary_color"
+            android:layout_gravity="center_horizontal"
+            android:text="ONBOARDING"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:text="We care about privacy"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:text="Totam est quidem consequatur aut. Laborum ab
+eaque adipisci eveniet exercitationem sed sunt
+maxime et. Nobis et vero optio. Cum vel
+voluptatibus iste unde optio totam dolore
+voluptas."/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+            <ImageView android:layout_height="8dp" android:layout_margin="10dp" android:layout_width="8dp" app:srcCompat="@drawable/unselect_dot" />
+            <ImageView android:layout_height="8dp" android:layout_margin="10dp"  android:layout_width="8dp" app:srcCompat="@drawable/select_dot" />
+            <ImageView android:layout_height="8dp" android:layout_width="8dp" android:layout_margin="10dp"  app:srcCompat="@drawable/unselect_dot" />
+            <ImageView android:layout_height="8dp" android:layout_width="8dp"  android:layout_margin="10dp" app:srcCompat="@drawable/unselect_dot" />
+            <ImageView android:layout_height="8dp" android:layout_width="8dp"  android:layout_margin="10dp" app:srcCompat="@drawable/unselect_dot" />
+            <ImageView android:layout_height="8dp" android:layout_width="8dp"  android:layout_margin="10dp" app:srcCompat="@drawable/unselect_dot" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:id="@+id/next_btn_w2"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="40dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_color"
+            android:textSize="22sp"
+            android:text="NEXT"
+            android:background="@drawable/rounded_button"
+            />
+
+
+    </LinearLayout>
+
+</FrameLayout>
+
