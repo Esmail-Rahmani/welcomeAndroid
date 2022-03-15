@@ -1,12 +1,20 @@
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.RectShape;
+import android.os.Build;
 import android.os.Bundle;
 
 import com.google.android.flexbox.FlexboxLayout;
 import com.google.android.material.button.MaterialButton;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.view.View;
 import android.widget.LinearLayout;
@@ -24,6 +32,7 @@ public class HardSkillsActivity extends AppCompatActivity {
     SubSkill subSkill[] = new SubSkill[3];
     HardSkills hardSkills[] = new HardSkills[2];
 
+    @RequiresApi(api = Build.VERSION_CODES.P)
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +62,10 @@ public class HardSkillsActivity extends AppCompatActivity {
                 MaterialButton materialButton = new MaterialButton(this);
                 int finalI = i;
                 int finalJ = j;
+                materialButton.setInsetTop(0);
+                materialButton.setInsetBottom(0);
                 materialButton.setOnClickListener(new View.OnClickListener() {
+                    @RequiresApi(api = Build.VERSION_CODES.P)
                     @Override
                     public void onClick(View view) {
                         hardSkills[finalI].getSubSkills()[finalJ].setSelected(!hardSkills[finalI].getSubSkills()[finalJ].isSelected());
@@ -62,12 +74,7 @@ public class HardSkillsActivity extends AppCompatActivity {
                     }
                 });
                 setButtonColors(i, j, materialButton);
-
-
-                TextView tv = new TextView(this);
-                tv.setText(hardSkills[i].getSubSkills()[j].getName());
                 flexboxLayout.addView(materialButton);
-                flexboxLayout.addView(tv);
             }
 
             linearLayout.addView(flexboxLayout);
@@ -80,18 +87,32 @@ public class HardSkillsActivity extends AppCompatActivity {
 
     }
 
-    @SuppressLint("ResourceAsColor")
+
+    @RequiresApi(api = Build.VERSION_CODES.P)
+    @SuppressLint("RestrictedApi")
     private void setButtonColors(int i, int j, MaterialButton materialButton) {
         if(hardSkills[i].getSubSkills()[j].isSelected()){
-            materialButton.setBackgroundResource(R.color.primary_color);
+            materialButton.setBackgroundResource(R.drawable.rounded_button);
+            materialButton.setSupportBackgroundTintList(ContextCompat.getColorStateList(this, R.color.primary_color));
             materialButton.setPadding(10,10,10,10);
             materialButton.setText(hardSkills[i].getSubSkills()[j].getName());
-            materialButton.setTextColor(R.color.white);
+            materialButton.setTextColor(getResources().getColor(R.color.white));
         }else{
-            materialButton.setBackgroundResource(R.color.secondary_color);
+            ShapeDrawable shapedrawable = new ShapeDrawable();
+            RectShape r = new RectShape();
+            shapedrawable.setShape(new RectShape());
+            shapedrawable.getPaint().setColor(getResources().getColor(R.color.primary_color));
+            shapedrawable.getPaint().setStrokeWidth(10f);
+            shapedrawable.getPaint().setStyle(Paint.Style.STROKE);
+            GradientDrawable shape = new GradientDrawable();
+            shape.setShape(GradientDrawable.RECTANGLE);
+            shape.setCornerRadii(new float[] { 30, 30, 30, 30, 30, 30, 30, 30 });
+            shape.setColor(Color.TRANSPARENT);
+            shape.setStroke(3, getResources().getColor(R.color.primary_color));
+            materialButton.setBackgroundDrawable(shape);
             materialButton.setPadding(10,10,10,10);
             materialButton.setText(hardSkills[i].getSubSkills()[j].getName());
-            materialButton.setTextColor(R.color.primary_color);
+            materialButton.setTextColor(getResources().getColor(R.color.primary_color));
         }
     }
 
