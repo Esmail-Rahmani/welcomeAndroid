@@ -3,82 +3,147 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/primary_color"
     tools:context=".W3Fragment">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:id="@+id/welcome3"
-        android:layout_marginTop="40dp"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/welcome1"
         android:orientation="vertical"
-        android:background="@drawable/rounded_linear_layout"
+        android:background="@color/white"
         android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleX="1.1"
+            android:src="@drawable/img3"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="140dp"
-            android:gravity="center_horizontal"
-            android:textSize="42sp"
-            android:textStyle="bold"
-            android:textColor="@color/primary_color"
             android:layout_gravity="center_horizontal"
-            android:text="Welcome to the
-Self-Assessement"/>
+            android:scaleType="fitStart"
+            android:scaleY="0.8"
+            android:scaleX="0.8"
+            android:src="@drawable/fairception"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:textSize="14sp"
-            android:gravity="center_horizontal"
-            android:textColor="@color/primary_color"
-            android:layout_gravity="center_horizontal"
-            android:text="Describe how you see yourself by ranking a
-selection of 20 soft skills\n\n
-Don’t worry, there is no wrong or righ answer,
-everyone is unique."/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center_horizontal"
-            android:textStyle="bold"
-            android:textSize="22sp"
-            android:textColor="@color/primary_color"
-            android:layout_gravity="center_horizontal"
-            android:text="It will take beetween 3 and 5 minutes. 
-And remember: be fair to yourself!"/>
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:layout_gravity="center_horizontal"
-            android:orientation="horizontal">
-            <ImageView android:layout_height="8dp" android:layout_margin="10dp" android:layout_width="8dp" app:srcCompat="@drawable/unselect_dot" />
-            <ImageView android:layout_height="8dp" android:layout_margin="10dp"  android:layout_width="8dp" app:srcCompat="@drawable/unselect_dot" />
-            <ImageView android:layout_height="8dp" android:layout_width="8dp" android:layout_margin="10dp"  app:srcCompat="@drawable/select_dot" />
-            <ImageView android:layout_height="8dp" android:layout_width="8dp"  android:layout_margin="10dp" app:srcCompat="@drawable/unselect_dot" />
-            <ImageView android:layout_height="8dp" android:layout_width="8dp"  android:layout_margin="10dp" app:srcCompat="@drawable/unselect_dot" />
-            <ImageView android:layout_height="8dp" android:layout_width="8dp"  android:layout_margin="10dp" app:srcCompat="@drawable/unselect_dot" />
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:background="@drawable/top_left_corner_radius"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="26dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/unselect_dot" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/unselect_dot" />
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="12dp"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/select_dot" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/unselect_dot" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/unselect_dot" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/unselect_dot" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="SELF-REFLECT"
+                android:textColor="@color/secondary_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="Think about how you come up
+\nRank your own soft skills"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:text="
+Don’t worry, there is no wrong or right answer, everyone is unique."
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+
 
         </LinearLayout>
 
+
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="match_parent"
             android:id="@+id/next_btn_w2"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="40dp"
-            android:textSize="22sp"
-            android:textColor="@color/primary_color"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LET'S BEGIN"
+            android:layout_gravity="end"
+            android:layout_margin="18dp"
             android:background="@drawable/rounded_button"
-            />
+            android:text="NEXT"
+            android:textColor="@color/primary_color"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    </LinearLayout>
 </FrameLayout>

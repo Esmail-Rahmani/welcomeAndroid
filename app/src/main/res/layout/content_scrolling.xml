@@ -13,20 +13,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/hard_skill_linear_layout"
         android:orientation="vertical">
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_one"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_border"
-            android:textColor="@color/secondary_color"
-            android:text="@string/app_name"
-            />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="70sp"
-            android:text="@string/app_name"/>
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

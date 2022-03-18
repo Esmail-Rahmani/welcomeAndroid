@@ -3,86 +3,201 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/secondary_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     tools:context=".W2Fragment">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:id="@+id/welcome2"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/welcome1"
         android:orientation="vertical"
-        android:background="@color/primary_color"
+        android:background="@color/white"
         android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:textSize="32sp"
-            android:textColor="@color/purple_200"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/name"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="140dp"
-            android:textSize="42sp"
-            android:textStyle="bold"
-            android:textColor="@color/secondary_color"
-            android:layout_gravity="center_horizontal"
-            android:text="ONBOARDING"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:textSize="34sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:layout_gravity="center_horizontal"
-            android:text="We care about privacy"/>
+            android:scaleX="1.1"
+            android:src="@drawable/img2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:textSize="16sp"
-            android:textColor="@color/white"
             android:layout_gravity="center_horizontal"
-            android:text="Totam est quidem consequatur aut. Laborum ab
-eaque adipisci eveniet exercitationem sed sunt
-maxime et. Nobis et vero optio. Cum vel
-voluptatibus iste unde optio totam dolore
-voluptas."/>
+            android:scaleType="fitStart"
+            android:scaleY="0.8"
+            android:scaleX="0.8"
+            android:src="@drawable/fairception"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
-            android:layout_gravity="center_horizontal"
-            android:orientation="horizontal">
-            <ImageView android:layout_height="8dp" android:layout_margin="10dp" android:layout_width="8dp" app:srcCompat="@drawable/unselect_dot" />
-            <ImageView android:layout_height="8dp" android:layout_margin="10dp"  android:layout_width="8dp" app:srcCompat="@drawable/select_dot" />
-            <ImageView android:layout_height="8dp" android:layout_width="8dp" android:layout_margin="10dp"  app:srcCompat="@drawable/unselect_dot" />
-            <ImageView android:layout_height="8dp" android:layout_width="8dp"  android:layout_margin="10dp" app:srcCompat="@drawable/unselect_dot" />
-            <ImageView android:layout_height="8dp" android:layout_width="8dp"  android:layout_margin="10dp" app:srcCompat="@drawable/unselect_dot" />
-            <ImageView android:layout_height="8dp" android:layout_width="8dp"  android:layout_margin="10dp" app:srcCompat="@drawable/unselect_dot" />
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:background="@drawable/top_left_corner_radius"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="26dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/unselect_dot" />
+
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="12dp"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/select_dot" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/unselect_dot" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/unselect_dot" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/unselect_dot" />
+
+                <ImageView
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_margin="10dp"
+                    app:srcCompat="@drawable/unselect_dot" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="PRIVACY IS FREEDOM"
+                android:textColor="@color/secondary_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="Receiving feedback is crucial"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="
+However it can feel uncomfortable
+\n\n @fairception feedbacks are :"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/anonymous" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Anonymous"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/strengths" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text=" Strengths \n based"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/negativity_free" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:text="Negativity\n free"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
 
         </LinearLayout>
 
+
         <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="match_parent"
             android:id="@+id/next_btn_w2"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="40dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/primary_color"
-            android:textSize="22sp"
-            android:text="NEXT"
+            android:layout_gravity="end"
+            android:layout_margin="18dp"
             android:background="@drawable/rounded_button"
-            />
-
-
-    </LinearLayout>
+            android:text="NEXT"
+            android:textColor="@color/primary_color"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
 
